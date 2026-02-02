@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCI Lecture Notes</title>
+  </head>
+
+  <style>
+    body {
+      background-color: #fff8f0;
+    }
+
+    a {
+      font-size: 24px;
+    }
+    p {
+      font-size: 24px;
+    }
+    li {
+      font-size: 20px;
+    }
+    img {
+      width: 400px;
+      max-width: 100%;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Human–Computer Interaction</h1>
+      <p>An interdisciplinary study of people and interactive systems</p>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <!-- Current page is indicated using aria-current -->
+          <li>
+            <a href="index.html" aria-current="page">Home</a>
+          </li>
+
+          <!-- Navigation links to other site sections -->
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="analysis.html">Interaction Analysis</a></li>
+          <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+          <li><a href="assignment01.html">Lab 01 Rules</a></li>
+          <li><a href="HCI-lecture-Notes.html">Lecture Notes</a></li>
+          <li><a href="hci-answers.html">HCI Answers</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Lecture 1 -->
+      <section>
+        <header>
+          <h2>Lecture 1: Introduction to HCI</h2>
+        </header>
+
+        <article>
+          <h3>What is HCI?</h3>
+          <p>
+            Human–Computer Interaction (HCI) is a field that brings together
+            <strong>human cognitive psychology</strong>,
+            <strong>design principles</strong>, and
+            <strong>computer science</strong> to improve how people interact
+            with digital systems. Its main objective is to make systems
+            efficient, usable, and user-friendly.
+          </p>
+        </article>
+
+        <article>
+          <h3>Human Behavior and Learned Patterns</h3>
+          <p>
+            People often perform tasks based on habits formed early in life or
+            by observing others. For example, when asked to draw a glass, most
+            individuals rely on memory rather than observation. Although
+            behaviors and habits can be modified over time, a person’s core
+            nature tends to remain consistent.
+          </p>
+        </article>
+
+        <article>
+          <h3>Common Types of Interfaces</h3>
+          <ul>
+            <li>
+              Graphical User Interface (GUI) – interaction through visual
+              elements
+            </li>
+            <li>
+              Command Line Interface (CLI) – interaction using text commands
+            </li>
+            <li>Voice-based Interface – interaction using spoken input</li>
+            <li>
+              Gesture-based Interface – interaction through physical movements
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Human Memory Systems</h3>
+          <p>
+            Human beings process and store information using different memory
+            systems:
+          </p>
+          <ul>
+            <li>
+              <strong>Short-Term Memory (STM):</strong> temporarily holds
+              limited information
+            </li>
+            <li>
+              <strong>Long-Term Memory (LTM):</strong> stores information for
+              extended periods
+            </li>
+            <li>
+              <strong>Sensory Memory:</strong> briefly retains sensory input
+              such as sight and sound
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Cognitive Neural Networks</h3>
+          <p>
+            Cognitive Neural Networks are inspired by how the human brain works.
+            They recognize and organize information by identifying patterns like
+            shapes, colors, and textures, similar to how humans perceive
+            objects.
+          </p>
+        </article>
+
+        <article>
+          <h3>Fitts’ Law</h3>
+          <p>
+            Fitts’ Law explains how long it takes for a user to move to a target
+            on a screen. The movement time increases when the target is far away
+            or small in size. This principle plays an important role in
+            interface design and influenced the development of pointing devices
+            such as the mouse.
+          </p>
+        </article>
+
+        <article>
+          <h3>Chunking Technique</h3>
+          <p>
+            Chunking is a cognitive strategy that makes information easier to
+            remember by dividing it into smaller, meaningful units. A common
+            example is writing a phone number as
+            <strong>123-456-7890</strong> instead of a long continuous sequence.
+          </p>
+        </article>
+      </section>
+
+      <!-- Lecture 2 -->
+      <section>
+        <header>
+          <h2>Lecture 2: Cognition and Prototyping</h2>
+        </header>
+
+        <article>
+          <h3>Stages of Human Memory Processing</h3>
+          <ol>
+            <li>Sensation</li>
+            <li>Attention</li>
+            <li>Perception</li>
+            <li>Learning</li>
+            <li>Memory Storage</li>
+            <li>Forgetting</li>
+            <li>Thinking</li>
+            <li>Problem Solving</li>
+            <li>Reasoning</li>
+            <li>Decision Making</li>
+          </ol>
+        </article>
+
+        <article>
+          <h3>Automatic Syringe Case Study</h3>
+          <article>
+            <h3>Atomic Syringe Example</h3>
+            <figure>
+              <img
+                src="Atomic syringe.png"
+                alt="Diagram of atomic syringe showing molecular structure"
+                width="500"
+              />
+              <figcaption>
+                Atomic Syringe - Visual representation of molecular injection
+              </figcaption>
+            </figure>
+          </article>
+          <p>
+            The Automatic Syringe case demonstrates how minor design flaws can
+            result in major real-world consequences. Poor keypad layout caused
+            users to enter incorrect values, leading to serious risks.
+          </p>
+          <p>
+            This case highlights that interface design is an iterative process.
+            Initial designs are rarely perfect and must be refined through
+            testing. Early prototypes should be simple and flexible so they can
+            be easily changed or replaced. Techniques such as paper prototypes
+            and quick mock-ups help designers improve interfaces efficiently.
+          </p>
+        </article>
+      </section>
+
+      <!-- Lecture 3 -->
+      <section>
+        <header>
+          <h2>Lecture 3: Norman’s Model and Gulf Analysis</h2>
+        </header>
+
+        <article>
+          <h3>Gulf of Execution and Gulf of Evaluation</h3>
+          <p>
+            The <strong>Gulf of Execution</strong> refers to the difficulty
+            users face when translating their goals into actions that the system
+            supports.
+          </p>
+          <p>
+            The <strong>Gulf of Evaluation</strong> refers to how hard it is for
+            users to understand the system’s response and determine whether
+            their goal was achieved.
+          </p>
+        </article>
+
+        <article>
+          <h3>Norman’s Action Cycle</h3>
+          <figure>
+            <img
+              src="Norman's cycle1.jpeg"
+              alt="Illustration showing Norman’s seven stages of user action"
+              width="400"
+            />
+            <img
+              src="Norman's cycle2.jpeg"
+              alt="Illustration showing Norman’s seven stages of user action"
+              width="400"
+            />
+            <figcaption>
+              Norman’s action cycle describing user–system interaction
+            </figcaption>
+          </figure>
+        </article>
+
+        <article>
+          <h3>Activity 5: Splitwise and Social Coordination</h3>
+
+          <h4>Applying HCI Concepts</h4>
+          <ul>
+            <li>
+              <strong>Cognitive Load:</strong> Users must mentally remember
+              individual orders and prices, placing stress on working memory.
+            </li>
+            <li>
+              <strong>Social Pressure:</strong> Talking about money in groups is
+              uncomfortable, encouraging users to trust the app’s calculations
+              without verification.
+            </li>
+            <li>
+              <strong>Unclear Feedback:</strong> If it is not obvious who has
+              paid, users struggle to understand the current financial state.
+            </li>
+            <li>
+              <strong>External Cognition:</strong> By showing calculations
+              visually, the interface reduces mental effort and improves
+              clarity.
+            </li>
+          </ul>
+
+          <h3>Design Objective</h3>
+          <p>
+            The primary goal is to minimize social tension while ensuring
+            accurate and transparent bill splitting to prevent
+            misunderstandings.
+          </p>
+
+          <h3>Gulf Analysis</h3>
+          <p>
+            <strong>Execution Gulf:</strong> The complexity involved in entering
+            detailed orders and splits within the application.
+          </p>
+          <p>
+            <strong>Evaluation Gulf:</strong> The challenge users face in
+            confirming whether the final balance matches the real payments made.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>HCI Lecture Notes – Semantic HTML Version</p>
+      <p><a href="index.html">Back to Home</a></p>
+    </footer>
+  </body>
+</html>
