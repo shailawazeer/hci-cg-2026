@@ -1,10 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Character encoding for proper text rendering -->
     <meta charset="UTF-8" />
 
-    <!-- Page title shown in browser tab and screen readers -->
     <title>Don Norman – Home</title>
     <style>
       body {
@@ -16,24 +14,39 @@
       p {
         font-size: 18px;
       }
+      #execution-evaluation-cycle {
+        background-color: #f0f8ff;
+      }
+      #goms-model {
+        background-color: #add8e6;
+      }
+      #klm-model {
+        background-color: #f5f5f5;
+      }
+      #human-error {
+        background-color: #e6e6fa;
+      }
     </style>
   </head>
   <body>
-    <!-- Page header: identifies the site and its purpose -->
     <header>
-      <h1>Don Norman</h1>
-      <p>Human–Computer Interaction Philosopher</p>
+      <h1>HCI Introduction</h1>
+      <p>
+        Human–Computer Interaction
+        <br />
+        This website serves as a comprehensive resource for students and
+        practitioners of Human–Computer Interaction (HCI). It covers fundamental
+        interaction models, cognitive frameworks like GOMS and KLM, and
+        practical design focus areas to help bridge the gap between human users
+        and computer systems.
+      </p>
     </header>
 
-    <!-- Primary navigation landmark for keyboard and screen reader users -->
     <nav aria-label="Primary navigation">
       <ul>
-        <!-- Current page is indicated using aria-current -->
         <li>
           <a href="index.html" aria-current="page">Home</a>
         </li>
-
-        <!-- Navigation links to other site sections -->
         <li><a href="cv.html">CV</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="analysis.html">Interaction Analysis</a></li>
@@ -44,30 +57,283 @@
       </ul>
     </nav>
 
-    <!-- Main content landmark: unique content of this page -->
     <main>
-      <section>
-        <!-- Section heading establishes content hierarchy -->
-        <h2>Biography</h2>
+      <hr />
 
-        <!-- Informative image with alternative text for accessibility -->
-        <img src="norman.jpg" alt="Portrait of Don Norman" />
+      <section id="execution-evaluation-cycle">
+        <h2>Norman's 7 stages of Action</h2>
+        <section>
+          <h2>Biography</h2>
+
+          <img src="norman.jpg" alt="Portrait of Don Norman" />
+
+          <p></p>
+          <p>
+            <strong>Donald Norman</strong> is a pioneer in the field of
+            Human–Computer Interaction, known for his work on user-centered
+            design, usability, and cognitive engineering. His model of
+            interaction is influential because it aligns with our intuitive
+            understanding of how users engage with technology.
+          </p>
+        </section>
+        <p>
+          Norman’s model of interaction is perhaps the most influential in
+          Human–Computer Interaction, possibly because of its closeness to our
+          intuitive understanding of the interaction between human user and
+          computer. The user formulates a plan of action, which is then executed
+          at the computer interface. When the plan, or part of the plan, has
+          been executed, the user observes the computer interface to evaluate
+          the result of the executed plan, and to determine further actions.
+        </p>
 
         <p>
-          Don Norman is a pioneer in the field of Human–Computer Interaction,
-          known for his work on user-centered design, usability, and cognitive
-          engineering.
+          The interactive cycle can be divided into two major phases:
+          <strong>execution</strong> and <strong>evaluation</strong>. These can
+          then be subdivided into seven stages:
+        </p>
+
+        <ol>
+          <li>Establishing the goal.</li>
+          <li>Forming the intention.</li>
+          <li>Specifying the action sequence.</li>
+          <li>Executing the action.</li>
+          <li>Perceiving the system state.</li>
+          <li>Interpreting the system state.</li>
+          <li>
+            Evaluating the system state with respect to the goals and
+            intentions.
+          </li>
+        </ol>
+
+        <h3>The Gulfs of Execution and Evaluation</h3>
+        <p>
+          Norman uses this model to demonstrate why some interfaces cause
+          problems to their users. He describes these in terms of the
+          <strong>gulf of execution</strong> and the
+          <strong>gulf of evaluation</strong>.
+        </p>
+
+        <p>
+          The <strong>gulf of execution</strong> is the difference between the
+          user’s formulation of the actions to reach the goal and the actions
+          allowed by the system. <br />The
+          <strong>gulf of evaluation</strong> is the distance between the
+          physical presentation of the system state and the expectation of the
+          user.
         </p>
       </section>
     </main>
+    <section id="human-error">
+      <h2>Human Error – Slips and Mistakes</h2>
+      <p>
+        Human errors are often classified into <em>slips</em> and
+        <em>mistakes</em>. These can be distinguished using Norman’s
+        <strong>gulf of execution</strong>.
+      </p>
 
-    <!-- Footer contains meta or supplementary information -->
+      <ul>
+        <li>
+          <strong>Slips:</strong> If you understand a system well, you have
+          formulated the right action but fail to execute it correctly—for
+          example, mistyping or accidentally pressing a button at the wrong
+          time.
+        </li>
+        <li>
+          <strong>Mistakes:</strong> If you do not know the system well, you may
+          not formulate the right goal—for example, thinking a magnifying glass
+          icon is for 'finding' when it is actually for 'magnifying'.
+        </li>
+      </ul>
+
+      <p>Understanding the type of error is vital for design:</p>
+      <ul>
+        <li>
+          <strong>Slips</strong> may be corrected by better screen design, such
+          as adding more space between buttons.
+        </li>
+        <li>
+          <strong>Mistakes</strong> require a better understanding of the
+          system, often needing radical redesign, improved training, or a
+          different metaphor for use.
+        </li>
+      </ul>
+
+      <footer>
+        <p>
+          Reference: This text is from Chapter 3: "The Interaction", page no 125
+          of "Human-Computer Interaction" by Alan Dix.
+        </p>
+      </footer>
+    </section>
+    <hr />
+
+    <section id="goms-model">
+      <h2>GOMS</h2>
+      <p>
+        The GOMS model, developed by Card, Moran, and Newell, is an acronym for
+        <strong>Goals, Operators, Methods, and Selection</strong>. It provides a
+        framework for describing the cognitive and physical steps required to
+        complete a task.
+      </p>
+
+      <article>
+        <h3>The Four Elements of GOMS</h3>
+        <ul>
+          <li>
+            <strong>Goals:</strong> These represent what the user wants to
+            achieve and serve as "memory points" for evaluating progress or
+            returning to after an error.
+          </li>
+          <li>
+            <strong>Operators:</strong> These are the lowest level of analysis,
+            representing basic actions like pressing a key or reading a dialog
+            box.
+          </li>
+          <li>
+            <strong>Methods:</strong> These describe the different ways a goal
+            can be achieved, such as using a menu versus a keyboard shortcut.
+          </li>
+          <li>
+            <strong>Selection:</strong> These are rules that predict which
+            method a user will choose based on the system state or user habits.
+          </li>
+        </ul>
+      </article>
+
+      <h3>Design Focus: GOMS saves money</h3>
+      <p>
+        A real-world application of GOMS occurred when the telephone company
+        NYNEX used it to analyze a proposed computer system. The analysis
+        revealed the new system would actually be slower than the old one,
+        leading the company to abandon the project and save millions of dollars.
+      </p>
+
+      <footer>
+        <p>
+          Reference: This text is from Chapter 12: "Cognitive models", page no
+          422-424 of "Human-Computer Interaction" by Alan Dix.
+        </p>
+      </footer>
+    </section>
+    <hr />
+
+    <section id="klm-model">
+      <h2>12.5.1 Keystroke-level model (KLM)</h2>
+      <p>
+        The Keystroke-Level Model (KLM) provides detailed predictions about user
+        performance by focusing on the human motor system. It is designed for
+        <strong>unit tasks</strong>—simple command sequences that typically take
+        less than 20 seconds, such as changing a font or using
+        search-and-replace.
+      </p>
+
+      <p>
+        KLM assumes the user is an expert and focuses solely on the
+        <strong>execution phase</strong> of a task. The model decomposes this
+        phase into seven specific operators:
+      </p>
+
+      <ul>
+        <li>
+          <strong>K (Keystroking):</strong> Striking keys, including modifiers
+          like Shift.
+        </li>
+        <li><strong>B (Button press):</strong> Pressing a mouse button.</li>
+        <li>
+          <strong>P (Pointing):</strong> Moving the mouse to a specific target.
+        </li>
+        <li>
+          <strong>H (Homing):</strong> Moving hands between the mouse and the
+          keyboard.
+        </li>
+        <li><strong>D (Drawing):</strong> Drawing lines using the mouse.</li>
+        <li>
+          <strong>M (Mental preparation):</strong> Pausing to mentally prepare
+          for a physical action.
+        </li>
+        <li>
+          <strong>R (System response):</strong> The time the user must wait for
+          the system.
+        </li>
+      </ul>
+
+      <h3>Operator Times</h3>
+      <p>
+        The total time to execute a task is calculated by summing the times for
+        each operator:
+        <em
+          >T<sub>execute</sub> = T<sub>K</sub> + T<sub>B</sub> + T<sub>P</sub> +
+          T<sub>H</sub> + T<sub>D</sub> + T<sub>M</sub> + T<sub>R</sub></em
+        >.
+      </p>
+
+      <table border="1" style="width: 100%; background-color: #fff">
+        <thead>
+          <tr style="background-color: #eee">
+            <th>Operator</th>
+            <th>Remarks</th>
+            <th>Time (s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>K</td>
+            <td>Press key (Good typist 90 wpm / Non-typist)</td>
+            <td>0.12 / 1.20</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>Mouse button click</td>
+            <td>0.20</td>
+          </tr>
+          <tr>
+            <td>P</td>
+            <td>Point with mouse (Average movement)</td>
+            <td>1.10</td>
+          </tr>
+          <tr>
+            <td>H</td>
+            <td>Home hands to/from keyboard</td>
+            <td>0.40</td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>Drawing – domain dependent</td>
+            <td>-</td>
+          </tr>
+
+          <tr>
+            <td>M</td>
+            <td>Mentally prepare</td>
+            <td>1.35</td>
+          </tr>
+          <tr>
+            <td>R</td>
+            <td>Response from system</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        The power of KLM lies in <strong>comparison</strong>. It allows
+        designers to compare different systems or different methods within the
+        same system to see which is fastest without needing to conduct lengthy
+        experiments with real users.
+      </p>
+
+      <footer>
+        <p>
+          Reference: This text is from Chapter 12: "Cognitive models", page no
+          437-439 of "Human-Computer Interaction" by Alan Dix.
+        </p>
+      </footer>
+    </section>
     <footer>
       <p>&copy; 2026 HCI–CG Course</p>
       <p>
-        <a href="assignment01.html">Lab 01 Instructions</a> |
-        <a href="https://github.com/humeraaa/hci-cg-2026">Starter Code</a> |
-        <a href="https://humeraaa.github.io/hci-cg-2026/">Live Demo</a>
+        <a href="https://github.com/shailawazeer/hci-cg-2026">Starter Code</a> |
+        <a href="">Live Demo</a>
       </p>
     </footer>
   </body>

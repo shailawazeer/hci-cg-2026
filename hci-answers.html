@@ -21,6 +21,15 @@
       strong {
         font-size: 18px;
       }
+      #part-B {
+        background-color: #f0f8ff;
+      }
+      #part-C {
+        background-color: #e6e6fa;
+      }
+      #Table {
+        background-color: #fff3cd;
+      }
     </style>
   </head>
 
@@ -45,8 +54,400 @@
     </header>
 
     <main>
+      <section id="Table">
+        <h2>Part A: Find Mistakes (Identify + Fix)</h2>
+        <table border="1">
+          <caption>
+            Common HTML structure and accessibility mistakes
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">UI Element / Issue</th>
+              <th scope="col">Wrong HTML (with mistake)</th>
+              <th scope="col">Correct UI Element</th>
+              <th scope="col">Correct HTML</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">
+                Multiple <code>h1</code> elements used on a page
+              </th>
+              <td>
+                <pre><code>&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h1&gt;Section Title&lt;/h1&gt;</code></pre>
+              </td>
+              <td>Single main page heading</td>
+              <td>
+                <pre><code>&lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;h2&gt;Section Title&lt;/h2&gt;</code></pre>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Radio buttons grouped without context</th>
+              <td>
+                <pre><code>&lt;p&gt;Select Gender:&lt;/p&gt;
+&lt;input type="radio" name="g"&gt; Male
+&lt;input type="radio" name="g"&gt; Female</code></pre>
+              </td>
+              <td>Semantic grouping with legend</td>
+              <td>
+                <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;Select Gender&lt;/legend&gt;
+  &lt;input type="radio" id="m" name="g"&gt;
+  &lt;label for="m"&gt;Male&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Section used without a heading</th>
+              <td>
+                <pre><code>&lt;section&gt;
+  &lt;p&gt;Some content here...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+              </td>
+              <td>Section with identifying heading</td>
+              <td>
+                <pre><code>&lt;section&gt;
+  &lt;h2&gt;About KLM&lt;/h2&gt;
+  &lt;p&gt;Some content here...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Table headers missing <code>scope</code> attribute
+              </th>
+              <td>
+                <pre><code>&lt;tr&gt;
+  &lt;th&gt;Operator&lt;/th&gt;
+  &lt;th&gt;Time&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+              </td>
+              <td>Accessible headers with column scope</td>
+              <td>
+                <pre><code>&lt;tr&gt;
+  &lt;th scope="col"&gt;Operator&lt;/th&gt;
+  &lt;th scope="col"&gt;Time&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Redundant title attribute on links</th>
+              <td>
+                <pre><code>&lt;a href="cv.html" title="CV"&gt;
+  CV
+&lt;/a&gt;</code></pre>
+              </td>
+              <td>Clean semantic link text</td>
+              <td>
+                <pre><code>&lt;a href="cv.html"&gt;CV&lt;/a&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Visual italics used instead of emphasis</th>
+              <td>
+                <pre><code>&lt;i&gt;Important note&lt;/i&gt;</code></pre>
+              </td>
+              <td>Semantic emphasis</td>
+              <td>
+                <pre><code>&lt;em&gt;Important note&lt;/em&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Using <code>div</code> for page footer</th>
+              <td>
+                <pre><code>&lt;div class="footer"&gt;
+  &copy; 2026
+&lt;/div&gt;</code></pre>
+              </td>
+              <td>Semantic footer landmark</td>
+              <td>
+                <pre><code>&lt;footer&gt;
+  &copy; 2026
+&lt;/footer&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Steps in a process using <code>ul</code></th>
+              <td>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Step 1: Point&lt;/li&gt;
+  &lt;li&gt;Step 2: Click&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </td>
+              <td>Ordered list for sequential steps</td>
+              <td>
+                <pre><code>&lt;ol&gt;
+  &lt;li&gt;Point&lt;/li&gt;
+  &lt;li&gt;Click&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Submit button using generic <code>input</code>
+              </th>
+              <td>
+                <pre><code>&lt;input type="button" value="Send"&gt;</code></pre>
+              </td>
+              <td>Semantic button for form submission</td>
+              <td>
+                <pre><code>&lt;button type="submit"&gt;Send&lt;/button&gt;</code></pre>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <code>nav</code> used for non-navigation content
+              </th>
+              <td>
+                <pre><code>&lt;nav&gt;
+  &lt;p&gt;Welcome to my website&lt;/p&gt;
+&lt;/nav&gt;</code></pre>
+              </td>
+              <td><code>nav</code> contains navigation links only</td>
+              <td>
+                <pre><code>&lt;header&gt;
+  &lt;p&gt;Welcome to my website&lt;/p&gt;
+&lt;/header&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Missing <code>alt</code> attribute on image</th>
+              <td>
+                <pre><code>&lt;img src="diagram.png"&gt;</code></pre>
+              </td>
+              <td>Image with alternative text</td>
+              <td>
+                <pre><code>&lt;img src="diagram.png" alt="Norman action cycle diagram"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Decorative image given meaningless alt text</th>
+              <td>
+                <pre><code>&lt;img src="line.png" alt="line"&gt;</code></pre>
+              </td>
+              <td>Decorative image with empty alt</td>
+              <td>
+                <pre><code>&lt;img src="line.png" alt=""&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Form input missing a label</th>
+              <td>
+                <pre><code>&lt;input type="text" name="email"&gt;</code></pre>
+              </td>
+              <td>Form input with associated label</td>
+              <td>
+                <pre><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input type="text" id="email" name="email"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">List items not wrapped in a list</th>
+              <td>
+                <pre><code>&lt;p&gt;Item 1&lt;/p&gt;
+&lt;p&gt;Item 2&lt;/p&gt;</code></pre>
+              </td>
+              <td>Proper unordered list</td>
+              <td>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row"><code>main</code> element used more than once</th>
+              <td>
+                <pre><code>&lt;main&gt;Content A&lt;/main&gt;
+&lt;main&gt;Content B&lt;/main&gt;</code></pre>
+              </td>
+              <td>Single main content landmark</td>
+              <td>
+                <pre><code>&lt;main&gt;
+  Content A
+  Content B
+&lt;/main&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Table header cells use <code>td</code> instead of
+                <code>th</code>
+              </th>
+              <td>
+                <pre><code>&lt;tr&gt;
+  &lt;td&gt;Name&lt;/td&gt;
+  &lt;td&gt;Score&lt;/td&gt;
+&lt;/tr&gt;</code></pre>
+              </td>
+              <td>Header cells marked correctly</td>
+              <td>
+                <pre><code>&lt;tr&gt;
+  &lt;th scope="col"&gt;Name&lt;/th&gt;
+  &lt;th scope="col"&gt;Score&lt;/th&gt;
+&lt;/tr&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Clickable text styled as button instead of using
+                <code>button</code>
+              </th>
+              <td>
+                <pre><code>&lt;div&gt;Submit&lt;/div&gt;</code></pre>
+              </td>
+              <td>Semantic button element</td>
+              <td>
+                <pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Using <code>div</code> instead of <code>section</code> for
+                thematic grouping
+              </th>
+              <td>
+                <pre><code>&lt;div&gt;
+  &lt;h2&gt;Lecture Notes&lt;/h2&gt;
+&lt;/div&gt;</code></pre>
+              </td>
+              <td>Thematic content section</td>
+              <td>
+                <pre><code>&lt;section&gt;
+  &lt;h2&gt;Lecture Notes&lt;/h2&gt;
+&lt;/section&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Form button missing type attribute</th>
+              <td>
+                <pre><code>&lt;button&gt;Submit&lt;/button&gt;</code></pre>
+              </td>
+              <td>Explicit button type</td>
+              <td>
+                <pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Image used as link without descriptive alt text
+              </th>
+              <td>
+                <pre><code>&lt;a href="home.html"&gt;
+  &lt;img src="home.png" alt=""&gt;
+&lt;/a&gt;</code></pre>
+              </td>
+              <td>Linked image with descriptive alt</td>
+              <td>
+                <pre><code>&lt;a href="home.html"&gt;
+  &lt;img src="home.png" alt="Go to home page"&gt;
+&lt;/a&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Using <code>strong</code> for headings</th>
+              <td>
+                <pre><code>&lt;strong&gt;Lecture 1&lt;/strong&gt;</code></pre>
+              </td>
+              <td>Proper heading element</td>
+              <td>
+                <pre><code>&lt;h2&gt;Lecture 1&lt;/h2&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Empty link with no accessible name</th>
+              <td>
+                <pre><code>&lt;a href="next.html"&gt;&lt;/a&gt;</code></pre>
+              </td>
+              <td>Link with descriptive text</td>
+              <td>
+                <pre><code>&lt;a href="next.html"&gt;Next page&lt;/a&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Using <code>span</code> instead of <code>label</code> for form
+                text
+              </th>
+              <td>
+                <pre><code>&lt;span&gt;Name&lt;/span&gt;
+&lt;input type="text"&gt;</code></pre>
+              </td>
+              <td>Proper form labeling</td>
+              <td>
+                <pre><code>&lt;label for="name"&gt;Name&lt;/label&gt;
+&lt;input id="name" type="text"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Paragraph used to wrap block elements</th>
+              <td>
+                <pre><code>&lt;p&gt;
+  &lt;section&gt;Content&lt;/section&gt;
+&lt;/p&gt;</code></pre>
+              </td>
+              <td>Block elements not nested in paragraphs</td>
+              <td>
+                <pre><code>&lt;section&gt;Content&lt;/section&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">
+                Missing <code>lang</code> attribute on <code>html</code>
+              </th>
+              <td>
+                <pre><code>&lt;html&gt;</code></pre>
+              </td>
+              <td>Language specified for accessibility</td>
+              <td>
+                <pre><code>&lt;html lang="en"&gt;</code></pre>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Using table for layout instead of data</th>
+              <td>
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Header&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+              </td>
+              <td>Layout using semantic structure</td>
+              <td>
+                <pre><code>&lt;header&gt;Header&lt;/header&gt;</code></pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
       <!-- Part B -->
-      <section>
+      <section id="part-B">
         <header>
           <h2>Part B: True / False</h2>
         </header>
@@ -57,49 +458,45 @@
               <p>
                 <strong>Statement:</strong> Every link inside
                 <code>&lt;ul&gt;</code> must be placed inside an
-                <code>&lt;li&gt;</code>.
+                <code>&lt;li&gt;</code> <strong>True</strong>.
               </p>
-              <p><strong>Answer:</strong> True</p>
             </li>
 
             <li>
               <p>
                 <strong>Statement:</strong> A page may have multiple
                 <code>&lt;h1&gt;</code> headings to make text larger.
+                <strong>False</strong>
               </p>
-              <p><strong>Answer:</strong> False</p>
             </li>
 
             <li>
               <p>
                 <strong>Statement:</strong>
                 <code>aria-current="page"</code> should be used on the active
-                navigation item.
+                navigation item.<strong>True</strong>
               </p>
-              <p><strong>Answer:</strong> True</p>
             </li>
 
             <li>
               <p>
                 <strong>Statement:</strong> A form is accessible even if it has
-                no <code>&lt;label&gt;</code> elements.
+                no <code>&lt;label&gt;</code> elements.<strong>False</strong>
               </p>
-              <p><strong>Answer:</strong> False</p>
             </li>
 
             <li>
               <p>
                 <strong>Statement:</strong> KLM predicts execution time for
-                expert, error-free performance.
+                expert, error-free performance. <strong>True</strong>
               </p>
-              <p><strong>Answer:</strong> True</p>
             </li>
           </ol>
         </article>
       </section>
 
       <!-- Part C -->
-      <section>
+      <section id="part-C">
         <header>
           <h2>Part C: Short Answer</h2>
         </header>

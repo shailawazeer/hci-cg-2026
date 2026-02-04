@@ -20,6 +20,12 @@
       pre {
         font-size: 18px;
       }
+      #design-focus-comparison {
+        background-color: #e0f7fa;
+      }
+      #worked-example {
+        background-color: #fffdd0;
+      }
       /* Minimal styling allowed in Lab 01: color only */
       .row-norman {
         background-color: #fff3cd;
@@ -186,8 +192,101 @@
         </table>
       </section>
 
+      <hr />
+
+      <section id="design-focus-comparison">
+        <h2>Design Focus: Quick Fixes & The Syringe Example</h2>
+        <p>
+          Interface design requires time and investment, but simple steps—like
+          thinking of the user and involving them early—can prevent fatal flaws.
+          The example of the Atomatic syringe highlights how a numeric keypad
+          interface could lead to a 10x dosage error, a flaw discovered only by
+          involving hospital staff.
+        </p>
+
+        <h3>Model Comparison: Analyzing the Syringe Interface</h3>
+        <p>
+          Below is a comparison of how Norman’s Model, GOMS, and KLM would
+          analyze the "Quick Fix" redesign (moving from a numeric keypad to
+          increment/decrement buttons).
+        </p>
+
+        <table border="1" style="width: 100%; background-color: #fff">
+          <thead>
+            <tr style="background-color: #2c3e50; color: white">
+              <th>Method</th>
+              <th>Analysis of the Syringe Example</th>
+              <th>Primary Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Norman’s Cycle</strong></td>
+              <td>
+                Identifies a massive <strong>Gulf of Execution</strong>. The
+                user's goal (set precise dose) is poorly mapped to a keypad
+                where a single slip (extra "0") creates a lethal state. The
+                redesign reduces this gulf by making the interface match the
+                task's precision.
+              </td>
+              <td>User Psychology & Error</td>
+            </tr>
+            <tr>
+              <td><strong>GOMS</strong></td>
+              <td>
+                Decomposes the <strong>Goal</strong> (Enter Dose).
+                <ul>
+                  <li>
+                    <strong>Method 1 (Keypad):</strong> Fast but lacks
+                    "Selection Rules" for error recovery.
+                  </li>
+                  <li>
+                    <strong>Method 2 (Buttons):</strong> Slower but uses
+                    specific <strong>Operators</strong> that force verification
+                    at each digit.
+                  </li>
+                </ul>
+              </td>
+              <td>Task Hierarchy & Goals</td>
+            </tr>
+            <tr>
+              <td><strong>KLM</strong></td>
+              <td>
+                Predicts <strong>Execution Time</strong>.
+                <ul>
+                  <li>Keypad: Uses <strong>K</strong> (Keystrokes).</li>
+                  <li>Buttons: Uses <strong>B</strong> (Button presses).</li>
+                </ul>
+                While KLM might show the keypad is faster (fewer keystrokes), it
+                highlights that speed is not the only metric for safety-critical
+                systems.
+              </td>
+              <td>Physical Motor Skills</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside>
+          <h4>The Lesson of Iteration</h4>
+          <p>
+            Because people are complicated, you won't get it right the first
+            time. Using "throw-away" prototypes and involving users early is the
+            most cost-effective way to find flaws before they become permanent
+            in code.
+          </p>
+        </aside>
+
+        <footer>
+          <p style="background-color: #89cff0">
+            Reference: Compiled from Alan Dix, "Human-Computer Interaction,"
+            Chapter 3 (Interaction), Chapter 12 (Cognitive Models), and Design
+            Focus "Quick Fixes" (pp. 125, 422, 437).
+          </p>
+        </footer>
+      </section>
+      <hr />
       <!-- Worked example -->
-      <section>
+      <section id="worked-example">
         <h2>Worked Example: Correcting a Single Character</h2>
 
         <p>
